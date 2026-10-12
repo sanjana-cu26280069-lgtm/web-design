@@ -1,0 +1,8 @@
+import pymysql
+from dbconfig import DB
+conn = pymysql.connect(**DB); cur = conn.cursor()
+data = [("Amit", "amit@example.com", 22), ("Neha", "neha@example.com", 21), ("Ravi", "ravi@example.com", 23)]
+cur.executemany("INSERT INTO users (name, email, age) VALUES (%s, %s, %s)", data)
+conn.commit()
+print(cur.rowcount, "rows inserted")
+conn.close()

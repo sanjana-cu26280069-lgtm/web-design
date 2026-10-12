@@ -1,0 +1,10 @@
+<img id="pic" width="300"><br>
+<button id="prev">Previous</button> <button id="next">Next</button>
+<script>
+  const imgs = ["images/1.jpg", "images/2.jpg", "images/3.jpg"];
+  let i = 0; const pic = document.getElementById("pic");
+  const show = () => pic.src = imgs[i];
+  document.getElementById("next").onclick = () => { i = (i + 1) % imgs.length; show(); };
+  document.getElementById("prev").onclick = () => { i = (i - 1 + imgs.length) % imgs.length; show(); };
+  show();
+</script>

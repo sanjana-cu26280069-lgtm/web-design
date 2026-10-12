@@ -1,0 +1,9 @@
+<script>
+  function parse(str) {
+    try { const obj = JSON.parse(str); console.log("Parsed:", obj); }
+    catch (e) { console.log("Invalid JSON:", e.message); }
+    finally { console.log("Parsing attempt finished"); }
+  }
+  parse('{"name":"Amit","age":22}');   // valid
+  parse('{name: Amit}');               // invalid
+</script>

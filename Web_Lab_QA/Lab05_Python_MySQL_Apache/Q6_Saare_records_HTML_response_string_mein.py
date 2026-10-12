@@ -1,0 +1,13 @@
+#!/var/www/venv/bin/python
+import pymysql, html
+from dbconfig import DB
+conn = pymysql.connect(**DB); cur = conn.cursor()
+cur.execute("SELECT id, name, email, age FROM users")
+rows = cur.fetchall(); conn.close()
+
+out = "<table border='1' cellpadding='6'><tr><th>ID</th><th>Name</th><th>Email</th><th>Age</th></tr>"
+for r in rows:
+    out += "<tr>" + "".join(f"<td>{html.escape(str(c))}</td>" for c in r) + "</tr>"
+out += "</table>"
+print("Content-Type: text/html\n")
+print(out)

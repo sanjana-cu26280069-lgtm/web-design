@@ -1,0 +1,13 @@
+import pymysql
+conn = pymysql.connect(host="localhost", user="pyuser", password="pypass123")
+cur = conn.cursor()
+cur.execute("CREATE DATABASE IF NOT EXISTS python_web_db")
+cur.execute("USE python_web_db")
+cur.execute("""CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    age INT
+)""")
+conn.commit(); conn.close()
+print("Database and table ready")

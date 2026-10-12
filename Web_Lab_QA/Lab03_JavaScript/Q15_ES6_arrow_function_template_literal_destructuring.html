@@ -1,0 +1,7 @@
+<script>
+  const add = (a, b) => a + b;
+  const person = { name: "Neha", age: 21, city: "Roorkee" };
+  const { name, age } = person;                 // object destructuring
+  const [x, y, ...rest] = [1, 2, 3, 4, 5];      // array destructuring
+  console.log(`${name} is ${age}. Sum = ${add(x, y)}. Rest = ${rest}`);
+</script>

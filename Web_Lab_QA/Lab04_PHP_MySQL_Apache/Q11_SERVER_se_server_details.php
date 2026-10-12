@@ -1,0 +1,8 @@
+<?php
+echo "Server software: " . $_SERVER['SERVER_SOFTWARE'] . "<br>";
+echo "Server name: "     . $_SERVER['SERVER_NAME'] . "<br>";
+echo "Server IP: "       . $_SERVER['SERVER_ADDR'] . "<br>";
+echo "Document root: "   . $_SERVER['DOCUMENT_ROOT'] . "<br>";
+echo "Request method: "  . $_SERVER['REQUEST_METHOD'] . "<br>";
+echo "Client IP: "       . $_SERVER['REMOTE_ADDR'] . "<br>";
+echo "PHP version: "     . phpversion();

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design Lab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      color: #111827;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+    .box {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
+    .labs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .lab {
+      background: #f8fbff;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    a {
+      color: #1d4ed8;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    small {
+      display: block;
+      margin-top: 8px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">
+      <h1>Web Design Lab</h1>
+      <p>All practical lab sheets and question-based files are organized here.</p>
+      <div class="labs">
+        <div class="lab"><a href="Web_Lab_QA/Lab01_HTML/">Lab 1: HTML</a><small>Text, lists, tables, forms</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab02_HTML_Forms_CSS/">Lab 2: Forms & CSS</a><small>HTML5 form validation and CSS</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab03_JavaScript/">Lab 3: JavaScript</a><small>Functions, DOM, events</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab04_PHP_MySQL_Apache/">Lab 4: PHP</a><small>Apache, PHP, MySQL</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab05_Python_MySQL_Apache/">Lab 5: Python</a><small>Python + MySQL + Apache</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab06_Python_MySQL_Apache/">Lab 6: Python</a><small>Similar practical set</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab07_Online_Bookstore/">Lab 7: Bookstore</a><small>Online bookstore project</small></div>
+        <div class="lab"><a href="Web_Lab_QA/Lab08_Client_Website_Project/">Lab 8: Client Project</a><small>Website project work</small></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

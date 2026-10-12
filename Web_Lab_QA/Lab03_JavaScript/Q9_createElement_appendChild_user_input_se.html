@@ -1,0 +1,9 @@
+<input id="t" placeholder="Type text"> <button id="add">Add</button>
+<div id="list"></div>
+<script>
+  document.getElementById("add").addEventListener("click", () => {
+    const p = document.createElement("p");
+    p.textContent = document.getElementById("t").value;
+    document.getElementById("list").appendChild(p);
+  });
+</script>

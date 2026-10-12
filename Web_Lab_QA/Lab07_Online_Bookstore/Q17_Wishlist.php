@@ -1,0 +1,10 @@
+<?php include 'header.php'; require_login();
+if (isset($_POST['add']))   $pdo->prepare("INSERT IGNORE INTO wishlist (user_id, book_id) VALUES (?, ?)")->execute([$_SESSION['uid'], (int)$_POST['book_id']]);
+if (isset($_GET['remove'])) $pdo->prepare("DELETE FROM wishlist WHERE user_id = ? AND book_id = ?")->execute([$_SESSION['uid'], (int)$_GET['remove']]);
+$st = $pdo->prepare("SELECT b.* FROM wishlist w JOIN books b ON b.id = w.book_id WHERE w.user_id = ?"); $st->execute([$_SESSION['uid']]);
+?>
+<div style="padding:24px"><h2>My Wishlist</h2>
+<?php foreach ($st as $b): ?>
+  <p><a href="book.php?id=<?= $b['id'] ?>"><?= e($b['title']) ?></a> - Rs. <?= $b['price'] ?> <a href="?remove=<?= $b['id'] ?>">Remove</a></p>
+<?php endforeach; ?></div>
+<?php include 'footer.php'; ?>
