@@ -1,4 +1,4 @@
-# Web Lab QA
+# web-design
 
 This repository contains the complete web technology lab sheet collection for the course.
 
