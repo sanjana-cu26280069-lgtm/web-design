@@ -1,0 +1,1 @@
+<!doctype html><html><head><meta charset="utf-8"><title><?=htmlspecialchars($pageTitle ?? 'Web App',ENT_QUOTES,'UTF-8')?></title></head><body><header><h1>Web App</h1></header>

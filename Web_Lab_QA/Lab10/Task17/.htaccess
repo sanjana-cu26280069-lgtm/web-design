@@ -1,0 +1,9 @@
+Options -Indexes
+RewriteEngine On
+# Force HTTPS only after HTTPS is configured on the host:
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Front controller fallback:
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

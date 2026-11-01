@@ -1,0 +1,15 @@
+# Example workflow (run in terminal)
+git switch -c feature/lab10
+# Edit files, then:
+git add .
+git commit -m "feat: add Lab 10"
+git switch main
+git merge feature/lab10
+# If Git reports a conflict: open the marked file, choose the correct content,
+# remove <<<<<<<, =======, >>>>>>> markers, then:
+git add path/to/conflicted-file
+git commit
+git push -u origin main
+
+# Add your own GitHub remote:
+# git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git

@@ -1,0 +1,15 @@
+project/
+├── app/
+│   ├── Controllers/
+│   ├── Models/
+│   └── Views/
+├── config/
+├── public/
+│   └── index.php
+├── storage/
+├── vendor/
+├── .env
+├── .gitignore
+└── composer.json
+
+Keep only public/ exposed by Apache. Keep config, storage, and vendor outside the public document root.

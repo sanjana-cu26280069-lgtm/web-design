@@ -1,0 +1,11 @@
+# Run these commands in the project directory
+git init
+git branch -M main
+git status
+git add .
+git commit -m "chore: add initial project structure"
+# Later, commit related changes in logical groups:
+git add Lab09/
+git commit -m "feat: add Lab 09 PHP exercises"
+git add Lab10/
+git commit -m "feat: add Lab 10 PHP exercises"
